@@ -3,6 +3,7 @@ import Banner from "./components/Banner"
 import { Suspense } from "react"
 import TechList from "./components/Technologies/TechList"
 import type { Itechnology } from "./Types/Technology Type"
+import Footer from "./components/Footer"
 
 
 const techsFetch = async ():Promise<Itechnology[]> => {
@@ -22,6 +23,7 @@ function App() {
     <Suspense fallback={<span className="loading loading-spinner text-error"></span>}>
     <TechList techsPromise={techsPromise}></TechList>
     </Suspense>
+    <Footer></Footer>
     </>
   )
 }

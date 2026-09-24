@@ -1,8 +1,11 @@
+import YourStack from "./YourStack";
+
 
 
 const AvailableTechs = ({ techList }) => {
     return (
-        <div>
+        <div className="flex justify-between max-w-7xl mx-auto px-4 my-4">
+            <div className="grid grid-cols-3 gap-3">
             {
                 techList.map((tech) => {
                     return (
@@ -53,6 +56,10 @@ const AvailableTechs = ({ techList }) => {
                     )
                 })
             }
+            </div>
+            <div>
+            <YourStack></YourStack>
+            </div>
         </div>
     );
 };
