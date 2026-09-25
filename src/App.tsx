@@ -20,9 +20,7 @@ function App() {
   const handleAddToStack = (tech: Itechnology) => {
 
     setSelectedTechs((previous) => {
-      const alreadyExists = previous.some(
-        (item) => item.id === tech.id
-      );
+      const alreadyExists = previous.some((item) => item.id === tech.id);
 
       if (alreadyExists) {
         return previous;
